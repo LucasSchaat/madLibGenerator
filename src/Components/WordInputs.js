@@ -39,27 +39,26 @@ class WordInputs extends Component {
     render(){
         const {
             inputOne,
-    inputTwo,
-    inputThree,
-    inputFour,
-    inputFive,
-    inputSix,
-    inputSeven,
-    inputEight,
-    inputNine,
-    inputTen,
-    inputEleven,
-    inputTwelve,
-    inputThirteen,
-    inputFourteen,
-    inputFifteen,
-    inputSixteen,
-    inputSeventeen,
-    inputEighteen,
-    inputNineteen,
-    inputTwenty
+            inputTwo,
+            inputThree,
+            inputFour,
+            inputFive,
+            inputSix,
+            inputSeven,
+            inputEight,
+            inputNine,
+            inputTen,
+            inputEleven,
+            inputTwelve,
+            inputThirteen,
+            inputFourteen,
+            inputFifteen,
+            inputSixteen,
+            inputSeventeen,
+            inputEighteen,
+            inputNineteen,
+            inputTwenty
         } = this.state
-        // console.log(this.props)
         return(
             <div className='inputs-background'>
                 <div className='inputs-container'>
@@ -72,7 +71,7 @@ class WordInputs extends Component {
                             name='inputOne'
                             value={this.state.inputOne}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -85,7 +84,7 @@ class WordInputs extends Component {
                             name='inputTwo'
                             value={this.state.inputTwo}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -98,7 +97,7 @@ class WordInputs extends Component {
                             name='inputThree'
                             value={this.state.inputThree}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -111,7 +110,7 @@ class WordInputs extends Component {
                             name='inputFour'
                             value={this.state.inputFour}
                             onChange={e => this.handleChange(e)}
-                            maxlength='6'
+                            maxLength='6'
                             type='text'
                         />
                     </div>
@@ -124,7 +123,7 @@ class WordInputs extends Component {
                             name='inputFive'
                             value={this.state.inputFive}
                             onChange={e => this.handleChange(e)}
-                            maxlength='20'
+                            maxLength='20'
                             type='text'
                         />
                     </div>
@@ -137,7 +136,7 @@ class WordInputs extends Component {
                             name='inputSix'
                             value={this.state.inputSix}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -150,7 +149,7 @@ class WordInputs extends Component {
                             name='inputSeven'
                             value={this.state.inputSeven}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -163,7 +162,7 @@ class WordInputs extends Component {
                             name='inputEight'
                             value={this.state.inputEight}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -176,7 +175,7 @@ class WordInputs extends Component {
                             name='inputNine'
                             value={this.state.inputNine}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -189,7 +188,7 @@ class WordInputs extends Component {
                             name='inputTen'
                             value={this.state.inputTen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -202,7 +201,7 @@ class WordInputs extends Component {
                             name='inputEleven'
                             value={this.state.inputEleven}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -215,7 +214,7 @@ class WordInputs extends Component {
                             name='inputTwelve'
                             value={this.state.inputTwelve}
                             onChange={e => this.handleChange(e)}
-                            maxlength='6'
+                            maxLength='6'
                             type='text'
                         />
                     </div>
@@ -228,7 +227,7 @@ class WordInputs extends Component {
                             name='inputThirteen'
                             value={this.state.inputThirteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -241,7 +240,7 @@ class WordInputs extends Component {
                             name='inputFourteen'
                             value={this.state.inputFourteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -254,7 +253,7 @@ class WordInputs extends Component {
                             name='inputFifteen'
                             value={this.state.inputFifteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -267,7 +266,7 @@ class WordInputs extends Component {
                             name='inputSixteen'
                             value={this.state.inputSixteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -280,7 +279,7 @@ class WordInputs extends Component {
                             name='inputSeventeen'
                             value={this.state.inputSeventeen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -293,7 +292,7 @@ class WordInputs extends Component {
                             name='inputEighteen'
                             value={this.state.inputEighteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -306,7 +305,7 @@ class WordInputs extends Component {
                             name='inputNineteen'
                             value={this.state.inputNineteen}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>
@@ -319,7 +318,7 @@ class WordInputs extends Component {
                             name='inputTwenty'
                             value={this.state.inputTwenty}
                             onChange={e => this.handleChange(e)}
-                            maxlength='10'
+                            maxLength='10'
                             type='text'
                         />
                     </div>

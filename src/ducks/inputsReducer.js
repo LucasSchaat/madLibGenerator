@@ -1,5 +1,10 @@
 import axios from 'axios'
-import { SAVE_INPUTS, SAVE_INPUTS_TO_DB, GET_OUTPUT } from './actionTypes'
+import {
+    SAVE_INPUTS,
+    SAVE_INPUTS_TO_DB,
+    GET_OUTPUT,
+    CLEAR_INPUTS
+} from './actionTypes'
 
 const initialState = {
     inputs: [],
@@ -28,7 +33,6 @@ export const saveInputs = (
     inputNineteen,
     inputTwenty
 ) => {
-    console.log('hit reducer')
     let savedInputs = [
         inputOne,
         inputTwo,
@@ -51,7 +55,6 @@ export const saveInputs = (
         inputNineteen,
         inputTwenty
     ]
-    console.log(savedInputs)
     return {
         type: SAVE_INPUTS,
         payload: savedInputs
@@ -76,10 +79,20 @@ export const getOutput = () => {
     }
 }
 
+export const clearInputs = () => {
+    let data = []
+    return {
+        type: CLEAR_INPUTS,
+        payload: data
+    }
+}
+
 export default function (state = initialState, action) {
     const { type, payload } = action
     switch (type) {
         case SAVE_INPUTS:
+            return {...state, inputs: payload}
+        case CLEAR_INPUTS:
             return {...state, inputs: payload}
         case SAVE_INPUTS_TO_DB + "_FULFILLED":
             return {...state}

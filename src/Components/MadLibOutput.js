@@ -6,7 +6,12 @@ class MadLibOutput extends Component {
 
     componentDidMount(){
         this.props.getOutput()
-        
+    }
+
+    componentDidUpdate(prepProps){
+        if(this.prevProps !== this.props) {
+            this.render()
+        }
     }
     
     render(){
@@ -32,7 +37,7 @@ class MadLibOutput extends Component {
                 <div className='output-text'>{`Jingle all the way.`}</div>
                 <div className='output-text'>{`Oh what fun it is to ride`}</div>
                 <div className='output-text'>{`In a one horse open ${output[18]}.`}</div>
-                <div className='output-text'>{`ELF Merry ${output[19]} Santa!`}</div>
+                <div className='output-text'>{`ELF: Merry ${output[19]} Santa!`}</div>
             </div>
         )   
     }

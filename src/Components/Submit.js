@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { saveInputsToDB } from '../ducks/inputsReducer'
 
 function Submit(props) {
-    console.log(props)
     return(
         <div className='submit-background'>
             <div className='submit-text'>Ready to Submit? </div>
@@ -12,8 +11,8 @@ function Submit(props) {
                 <Link to='/inputs'><button>NO</button></Link>
                 <button
                     onClick={()=> {
-                        this.props.saveInputsToDB(this.props.inputsReducer.inputs)
-                        this.props.history.push('/madlib-output')
+                        props.saveInputsToDB(props.inputsReducer)
+                        props.history.push('/madlib-output')
                     }}    
                 >YES</button>
             </div>

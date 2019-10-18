@@ -1,15 +1,49 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {Component} from 'react'
+import {Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { clearInputs } from '../ducks/inputsReducer'
 
-function Header(){
-    return(
-        <div className='header'>
-            <div className='logo'>{`MAD LIB THEATER`}</div>
-            <Link to='/inputs'>
-                <button className='header-button'>START AGAIN</button>
-            </Link>
-        </div>
-    )
+class Header extends Component{
+    constructor(){
+        super()
+        this.state = {
+            redirect: false
+        }
+    }
+
+    flipRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+    
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/inputs'/>
+        }
+    }
+    
+    render(){
+        return(
+            <div className='header'>
+                {this.renderRedirect()}
+                <div className='logo'>{`MAD LIB THEATER`}</div>
+                <button
+                    className='header-button'
+                    onClick={() => {
+                        this.props.clearInputs()
+                        this.flipRedirect()
+                    }}
+                >START AGAIN</button>
+            </div>
+        )
+    }
 }
 
-export default Header
+function mapStateToProps (state) {
+    return {
+        inputsReducer: state.inputsReducer
+    }
+}
+
+export default connect(mapStateToProps, { clearInputs })(Header)
